@@ -824,28 +824,24 @@ layout: default
 
 <div class="card">
 
-## 動画生成例1
+## 動画生成例 1
 
 <div class="text-center">
-  <video controls class="w-full h-48 object-cover rounded-lg shadow-md mb-2">
-    <source src="/movie/generated/gen_movie1.gif" type="video/mp4">
-    お使いのブラウザは動画の再生に対応していません。
-  </video>
-  <div class="text-xs text-gray-600">AI生成動画1（2.5MB）</div>
+    <a href="https://drive.google.com/file/d/12rmQofkcspQudN6fUnFhFWAjhtnb77nR/view?usp=sharing" target="_blank">
+      AI生成動画 1
+    </a>
 </div>
 
 </div>
 
 <div class="card">
 
-## 動画生成例2
+## 動画生成例 2
 
 <div class="text-center">
-  <video controls class="w-full h-48 object-cover rounded-lg shadow-md mb-2">
-    <source src="/movie/generated/gen_movie2.gif" type="video/mp4">
-    お使いのブラウザは動画の再生に対応していません。
-  </video>
-  <div class="text-xs text-gray-600">AI生成動画2（2.1MB）</div>
+    <a href="https://drive.google.com/file/d/1RZp4ujmH9MY6KN2JFBCypJl2WASiDTtx/view?usp=sharing" target="_blank">
+      AI生成動画 2
+    </a>
 </div>
 
 </div>
