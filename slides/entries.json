@@ -1,10 +1,10 @@
 {
     "slides_1": {
-      "title": "講義資料 第1回",
-      "description": "AI入門"
+      "title": "講義資料 第1回 - 生成AIって何？どう使うの？ -",
+      "description": "AI活用 - 入門編"
     },
     "slides_2": {
-      "title": "講義資料 第2回", 
-      "description": "機械学習基礎"
+      "title": "講義資料 第2回 - AI活用によるタスク効率化 -", 
+      "description": "AI活用 - 応用編"
     }
   }
