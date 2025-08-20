@@ -22,8 +22,10 @@ jobs:
         run: npm ci
       
       - name: Build Slidev
-        run: npx slidev build --base /${{ github.event.repository.name }}/
-      
+        run: |
+          npx slidev build slides_1.md --base /${{ github.event.repository.name }}/slides_1/ --out ../dist/slides_1
+          npx slidev build slides_2.md --base /${{ github.event.repository.name }}/slides_2/ --out ../dist/slides_2
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
