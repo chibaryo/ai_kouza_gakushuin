@@ -21,10 +21,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Build Slidev
+      - name: Build multiple slides
         run: |
-          npx slidev build slides_1.md --base /${{ github.event.repository.name }}/slides_1/ --out ../dist/slides_1
-          npx slidev build slides_2.md --base /${{ github.event.repository.name }}/slides_2/ --out ../dist/slides_2
+          # 各スライドをビルド
+          npx slidev build slides_1.md --base /${{ github.event.repository.name }}/slides_1/ --out dist/slides_1
+          npx slidev build slides_2.md --base /${{ github.event.repository.name }}/slides_2/ --out dist/slides_2
+          
+          # トップページ作成
+          echo '<!DOCTYPE html>
+          <html>
+          <head><title>AI講義資料</title></head>
+          <body>
+            <h1>📚 AI講義資料一覧</h1>
+            <ul>
+              <li><a href="slides_1/">第1回: AI入門</a></li>
+              <li><a href="slides_2/">第2回: 機械学習基礎</a></li>
+            </ul>
+          </body>
+          </html>' > dist/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
