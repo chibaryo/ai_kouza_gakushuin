@@ -824,7 +824,7 @@ layout: default
 
 <div class="card">
 
-## 動画生成例1
+## 動画生成例 1
 
 <div class="text-center">
     <a href="https://drive.google.com/file/d/12rmQofkcspQudN6fUnFhFWAjhtnb77nR/view?usp=sharing" target="_blank">
@@ -836,7 +836,7 @@ layout: default
 
 <div class="card">
 
-## 動画生成例2
+## 動画生成例 2
 
 <div class="text-center">
     <a href="https://drive.google.com/file/d/1RZp4ujmH9MY6KN2JFBCypJl2WASiDTtx/view?usp=sharing" target="_blank">
