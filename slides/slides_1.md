@@ -138,9 +138,10 @@ layout: default
 - **音楽生成**（Suno）
 - **動画生成**（Veo2, Runway, Google AI Studio）
 - **コード生成**（GitHub Copilot, Claude）
+- **ワークフロー自動化**（Dify）
 
 <div class="mt-4 p-3 bg-emerald-100 rounded">
-💡 <strong>特徴</strong>：新しいコンテンツを創造
+💡 <strong>特徴</strong>：新しいコンテンツを創造・自動化
 </div>
 
 </div>
@@ -158,7 +159,7 @@ class: text-center
 <span class="highlight">人間のように新しいコンテンツを作り出すAI</span>
 </div>
 
-<div class="grid grid-cols-3 gap-8 mt-12">
+<div class="grid grid-cols-4 gap-6 mt-12">
 
 <div class="text-center">
   <div class="text-6xl mb-4">📝</div>
@@ -176,6 +177,12 @@ class: text-center
   <div class="text-6xl mb-4">💭</div>
   <h3>考える</h3>
   <p class="text-sm opacity-75">質問に答える、アイデア出しなど</p>
+</div>
+
+<div class="text-center">
+  <div class="text-6xl mb-4">🚀</div>
+  <h3>自動化する</h3>
+  <p class="text-sm opacity-75">ワークフロー、業務効率化など</p>
 </div>
 
 </div>

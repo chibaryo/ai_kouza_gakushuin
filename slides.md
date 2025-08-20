@@ -5,12 +5,13 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## 生成AIって何？どう使うの？
-  学生向け1時間30分講義
+  ## AI活用によるタスク効率化
+  議事録・メール・要約の自動化
 drawings:
   persist: false
-transition: fade
-title: 生成AIって何？どう使うの？
+transition: slide-left
+title: AI活用によるタスク効率化
+subtitle: 議事録・メール・要約の自動化
 mdc: true
 ---
 
@@ -20,7 +21,6 @@ mdc: true
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: bold;
 }
 .highlight {
   background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
@@ -42,20 +42,11 @@ mdc: true
   font-size: 4rem;
   margin-bottom: 1rem;
 }
-
-/* Slidev表示の安定化 */
-.slidev-page {
-  transition: all 0.3s ease-in-out !important;
-}
-
-.slidev-layout {
-  min-height: auto !important;
-}
 </style>
 
-# <span class="text-gradient">生成AIって何？どう使うの？</span>
+# <span class="text-gradient">AI活用によるタスク効率化</span>
 
-## <span class="highlight">学生のための生成AI入門講座</span>
+## <span class="highlight">議事録・メール・要約の自動化</span>
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-4 py-2 rounded-lg cursor-pointer bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
@@ -71,37 +62,28 @@ mdc: true
 layout: default
 ---
 
-# 今日の講義内容
+# 📚 今日の講義内容
 
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-<div>
+<div class="card">
 
-## 📚 学習内容
-- **生成AIとは何か？**
-- **ChatGPTの基本的な使い方**
-- **画像生成AIの紹介**
-- **🚀 実践：AIポータルアプリ体験（重点）**
-  - AIツール診断（60個のツールから最適な組み合わせを発見）
-  - AI画像生成
-  - 読み上げAI
-  - AI模擬面接官
-  - ご当地グルメ案内
-- **🎯 60個のAIツールを実際に体験**
-- **技術的な学びと今後の活用**
+## 🎯 学習目標
+- **議事録・メール**のAI活用による自動化
+- **AI活用した要約**の実践手法
+- **タスク効率化**のためのAIツール活用
+- **従来のメモ・ブクマ**をAIで整理する方法
 
 </div>
 
-<div>
+<div class="card">
 
 ## ⏰ 時間配分（90分）
-- 生成AIの基礎知識：8分
-- ChatGPTの紹介：12分
-- 画像生成AIの紹介：8分
-- **実践体験（AIポータル5機能）：35分**
-- **🎯 60個のAIツール体験：20分**
-- 技術的な学び：5分
-- まとめ・質疑応答：2分
+- 🚀 導入・課題の整理：**10分**
+- 🧠 AIツールの基本紹介：**15分**
+- 🔧 **実践ワークショップ（前半）**：**25分**
+- 📝 議事録・メール効率化：**20分**
+- 🎯 **実践ワークショップ（後半）**：**20分**
 
 </div>
 
@@ -111,36 +93,1943 @@ layout: default
 layout: default
 ---
 
-# AIの種類を整理してみよう
+# 🎯 導入：学生生活での課題とAIが提供する解決策
 
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-<div>
+<div class="card">
 
-## 🔍 従来の技術・システム
-- **検索エンジン**（Google、Yahoo!）
-- **推薦システム**（YouTube、Netflix）
-- **音声認識**（Siri、Alexa）
-- **翻訳**（Google翻訳）
-- **ゲームAI**（将棋、囲碁）
+## 😰 日常的な悩み
 
-<div class="mt-4 p-3 bg-sky-100 rounded">
-💡 <strong>特徴</strong>：決められたルール・アルゴリズムで動作
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-red-100 rounded">
+    <div class="font-bold text-red-800 text-sm">📝 議事録作成が面倒</div>
+    <div class="text-xs">会議の要点を整理するのに時間がかかる</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">📧 メール作成に時間</div>
+    <div class="text-xs">適切な表現を考えるのに悩む</div>
+  </div>
+  
+  <div class="p-2 bg-yellow-100 rounded">
+    <div class="font-bold text-yellow-800 text-sm">📚 情報整理が追いつかない</div>
+    <div class="text-xs">メモやブクマが散らばっている</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">⏰ 作業効率が上がらない</div>
+    <div class="text-xs">同じ作業の繰り返しが多い</div>
+  </div>
 </div>
 
 </div>
 
-<div>
+<div class="card">
 
-## ✨ 生成AI（新しいAI）
-- **文章生成**（ChatGPT, Gemini）
-- **画像生成**（DALL-E、Midjourney, Gemini Canvas）
-- **音楽生成**（Suno）
-- **動画生成**（Veo2, Runway, Google AI Studio）
-- **コード生成**（GitHub Copilot, Claude）
+## ✨ AIが提供する解決策
 
-<div class="mt-4 p-3 bg-emerald-100 rounded">
-💡 <strong>特徴</strong>：新しいコンテンツを創造
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🤖 議事録の自動生成</div>
+    <div class="text-xs">Zoom Pro AIで文字起こし・要約</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📧 メールの下書き作成</div>
+    <div class="text-xs">Geminiで状況に応じた文章生成</div>
+  </div>
+  
+  <div class="p-2 bg-indigo-100 rounded">
+    <div class="font-bold text-indigo-800 text-sm">📖 情報の自動整理</div>
+    <div class="text-xs">Notebook LMで要約・構造化</div>
+  </div>
+  
+  <div class="p-2 bg-pink-100 rounded">
+    <div class="font-bold text-pink-800 text-sm">⚡ 作業の自動化</div>
+    <div class="text-xs">AIツールの組み合わせで効率化</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 今回紹介するAIツール
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎥 Zoom Pro (AI Companion)
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📹 動画クラウド録画</div>
+    <div class="text-xs">会議を自動で録画・保存</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎙️ AI文字起こし</div>
+    <div class="text-xs">リアルタイムで字幕生成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📋 自動要約</div>
+    <div class="text-xs">会議内容の要点を自動抽出</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 📝 Notebook LM
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📖 Zoom文字起こし要約</div>
+    <div class="text-xs">議事録の自動整理・構造化</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🌐 YouTube要約</div>
+    <div class="text-xs">動画内容の要点を自動抽出</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔍 関連性分析</div>
+    <div class="text-xs">複数文書の関連性を発見</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 今回紹介するAIツール（続き）
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎨 OpenAI Sora
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🎨 高品質画像生成</div>
+    <div class="text-xs">テキスト説明からリアルな画像作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎬 短編動画生成</div>
+    <div class="text-xs">数秒の動画クリップを自動生成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔧 詳細な指示</div>
+    <div class="text-xs">具体的な設定・スタイルの指定</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎬 Google AI Studio Veo2
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📹 高品質動画作成</div>
+    <div class="text-xs">プロ品質の動画を自動生成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎭 ストーリー性</div>
+    <div class="text-xs">物語性のある動画を自動生成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔗 Google統合</div>
+    <div class="text-xs">Googleアカウントでシームレス連携</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 今回紹介するAIツール（続き）
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🗺️ Mapify
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🔗 YouTube Link入力</div>
+    <div class="text-xs">動画URLから自動でマインドマップ作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🌱 AIマインドマップ生成</div>
+    <div class="text-xs">動画内容を構造化して可視化</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📥 マークダウン出力</div>
+    <div class="text-xs">Gammaでのスライド作成用</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎨 Gamma
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📝 マークダウン入力</div>
+    <div class="text-xs">Mapifyの出力を基にスライド作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎨 自動スライド生成</div>
+    <div class="text-xs">AIが美しいデザインで作成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📤 多形式エクスポート</div>
+    <div class="text-xs">PDF、PPTX、画像など</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 今回紹介するAIツール（続き）
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🚀 Dify
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🤖 ノーコードAI開発</div>
+    <div class="text-xs">プログラミング不要でAIアプリ作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔗 複数AIモデル対応</div>
+    <div class="text-xs">Gemini、OpenAI、Claudeなど</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 ビジュアルワークフロー</div>
+    <div class="text-xs">ドラッグ&ドロップで簡単構築</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🔧 実践ワークショップ：6つのAIワークフロー体験
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 体験する6つのワークフロー
+
+<div class="space-y-2 mt-2">
+  <div class="flex items-center">
+    <div class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">1</div>
+    <div class="text-xs">🎥 Zoom文字起こし</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">2</div>
+    <div class="text-xs">📝 Notebook LM要約</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">3</div>
+    <div class="text-xs">🎨 Sora画像・動画生成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-5 h-5 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">4</div>
+    <div class="text-xs">🎬 Veo2動画生成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">5</div>
+    <div class="text-xs">🎨 Mapify + Gammaスライド作成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">6</div>
+    <div class="text-xs">🚀 Dify高度なAIワークフロー</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💻 実践の流れ
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📱 各ワークフローの基本操作</div>
+    <div class="text-xs">実際に触ってみる</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔄 ツールの連携体験</div>
+    <div class="text-xs">入力→処理→出力の流れ</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">💡 効果と注意点</div>
+    <div class="text-xs">実際の使用感を確認</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">🎯 自分の課題への応用</div>
+    <div class="text-xs">今後の活用計画を策定</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎥 ワークフロー1：Zoom Pro AI文字起こし
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 Zoom Pro AIの基本機能
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📹 クラウドレコーディング</div>
+    <div class="text-xs">ミーティングを自動でクラウドに保存</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🗣️ AI自動字幕生成</div>
+    <div class="text-xs">リアルタイムで高精度な字幕を生成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📝 文字起こしファイル</div>
+    <div class="text-xs">後から編集・ダウンロード可能</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 実践のポイント
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎙️ 音声品質</div>
+    <div class="text-xs">クリアな音声で字幕精度を向上</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📋 設定確認</div>
+    <div class="text-xs">録画開始前に字幕機能を有効化</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔄 次のステップ</div>
+    <div class="text-xs">NoteBookLMでの要約・整理</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎥 Zoom Pro実践：レコーディングと文字起こし管理
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📹 クラウドレコーディング管理
+
+<div class="text-center">
+  <img src="/zoom_ai/zoom_ai1.png" alt="Zoom レコーディングと文字起こし管理" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">Zoomのレコーディングと文字起こし管理画面</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">主な機能：</div>
+<div>• クラウドレコーディング一覧<br/>• 文字起こしファイル管理<br/>• 検索・フィルター機能<br/>• ダウンロード・削除操作</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🗂️ 文字起こしファイルの活用
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📥 ダウンロード</div>
+    <div class="text-xs">文字起こしファイルをローカルに保存</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📝 編集・修正</div>
+    <div class="text-xs">必要に応じて内容を調整</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔄 NoteBookLM連携</div>
+    <div class="text-xs">要約・整理のための入力として活用</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎥 Zoom Pro実践：AI字幕の詳細設定
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## ⚙️ AI字幕の設定画面
+
+<div class="text-center">
+  <img src="/zoom_ai/zoom_ai2.png" alt="Zoom AI字幕設定" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AI字幕の詳細設定とカスタマイズ</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 字幕設定のポイント
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🌐 言語設定</div>
+    <div class="text-xs">日本語・英語など複数言語対応</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📊 字幕表示</div>
+    <div class="text-xs">リアルタイム表示と録画保存</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🎨 カスタマイズ</div>
+    <div class="text-xs">フォント・サイズ・色の調整</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 ワークフロー2：NoteBookLM要約・整理
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 NoteBookLMの基本機能
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📚 文書要約・分析</div>
+    <div class="text-xs">Zoom字幕、PDF、ウェブ記事を自動分析</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🧠 知識の構造化</div>
+    <div class="text-xs">複雑な情報を分かりやすく整理</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">💡 学習支援</div>
+    <div class="text-xs">学生向けに平易化・カスタマイズ</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎓 学生向け活用ポイント
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📝 暗記カード作成</div>
+    <div class="text-xs">重要なポイントを穴埋め問題形式で</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🧪 実験計画支援</div>
+    <div class="text-xs">理論を証明する実験を提案</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 研究プロジェクト管理</div>
+    <div class="text-xs">情報収集からレポート作成まで</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 NoteBookLM実践：多様なソースからの要約・整理
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📋 基本的な要約プロセス
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">1️⃣ 字幕ファイルアップロード</div>
+    <div class="text-xs">Zoom Proで生成された字幕をNoteBookLMに投入</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">2️⃣ AI要約の実行</div>
+    <div class="text-xs">「要点を3つの箇条書きで」など具体的指示</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">3️⃣ 学生向け平易化</div>
+    <div class="text-xs">「高校生向けに分かりやすく」で専門用語を解説</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 効果的なプロンプト例
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📚 学習支援系</div>
+    <div class="text-xs">「この内容で5つのテスト予想問題を作成して」</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🔍 分析系</div>
+    <div class="text-xs">「話者の主張と証拠の信頼性を評価して」</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🎯 応用系</div>
+    <div class="text-xs">「教育現場での活用方法を3つ提案して」</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🔄 Zoom AI + NoteBookLM連携ワークフロー
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 連携の流れ
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">1️⃣ Zoom Pro AI</div>
+    <div class="text-xs">ミーティング録画・AI字幕生成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">2️⃣ 文字起こしファイル</div>
+    <div class="text-xs">字幕ファイルをダウンロード</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">3️⃣ NoteBookLM</div>
+    <div class="text-xs">要約・分析・構造化</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 連携のメリット
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">⏰ 時間効率化</div>
+    <div class="text-xs">手動文字起こしの手間を削減</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🧠 深い分析</div>
+    <div class="text-xs">AIが内容を構造化・要約</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 知識管理</div>
+    <div class="text-xs">会議内容を体系的に整理</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 NoteBookLM活用事例：Zoom文字起こしからメモ作成
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📝 Zoom文字起こしの活用
+
+<div class="text-center">
+  <img src="/notebooklm/zoom_notebooklm_memo.png" alt="Zoom文字起こしからメモ作成" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">Zoomの文字起こしを基にした詳細なメモ作成</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">作成されるメモ：</div>
+<div>• 会議の要点まとめ<br/>• 重要な決定事項<br/>• アクションアイテム<br/>• 次回への課題</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 メモ作成のポイント
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📋 構造化</div>
+    <div class="text-xs">情報を論理的に整理</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔍 重要度</div>
+    <div class="text-xs">優先順位をつけて整理</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📅 時系列</div>
+    <div class="text-xs">議論の流れを時系列で整理</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 NoteBookLM活用事例：Zoom文字起こしからマインドマップ作成
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🧠 マインドマップでの構造化
+
+<div class="text-center">
+  <img src="/notebooklm/zoom_notebooklm_mindmap.png" alt="Zoom文字起こしからマインドマップ作成" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">会議内容をマインドマップで視覚的に整理</div>
+</div>
+
+<div class="mt-3 p-2 bg-green-50 rounded text-xs">
+<div class="font-bold mb-1">マインドマップの特徴：</div>
+<div>• 階層構造での整理<br/>• 関連性の可視化<br/>• 全体像の把握<br/>• 記憶の定着促進</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 マインドマップ活用のポイント
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎨 視覚的整理</div>
+    <div class="text-xs">複雑な議論を図解化</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🔗 関連性発見</div>
+    <div class="text-xs">隠れたつながりを発見</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📚 学習効果</div>
+    <div class="text-xs">理解度と記憶の向上</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 NoteBookLM実践：インターフェースと基本操作
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🖥️ NoteBookLMのメイン画面
+
+<div class="text-center">
+  <img src="/notebooklm/notebooklm1.png" alt="NoteBookLM メイン画面" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">左：ソース、中央：チャット、右：Studio > メモの3パネル構成</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">画面構成：</div>
+<div>• 左：ソース管理（YouTube動画、PDF等）<br/>• 中央：AIとの対話・要約<br/>• 右：生成されたメモ・資料</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🔍 ソース管理と分析
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📁 ソース追加</div>
+    <div class="text-xs">YouTube動画、PDF、ウェブ記事を簡単追加</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔗 複数ソース連携</div>
+    <div class="text-xs">複数の資料を同時に分析・比較</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 自動要約生成</div>
+    <div class="text-xs">AIが内容を分析して構造化</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 NoteBookLM実践：詳細分析とメモ作成
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📝 詳細なブリーフィング資料
+
+<div class="text-center">
+  <img src="/notebooklm/notebooklm2.png" alt="NoteBookLM 詳細分析画面" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIが生成した詳細な分析資料とメモ</div>
+</div>
+
+<div class="mt-3 p-2 bg-green-50 rounded text-xs">
+<div class="font-bold mb-1">生成される内容：</div>
+<div>• 詳細ブリーフィング資料<br/>• 多角的分析<br/>• 実践的な対処法<br/>• 専門家の見解まとめ</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 実践的な活用例
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📚 学習資料作成</div>
+    <div class="text-xs">複雑な内容を学生向けに平易化</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🔬 研究分析</div>
+    <div class="text-xs">複数資料の比較・統合分析</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 レポート構成</div>
+    <div class="text-xs">研究の骨子と構成案を自動生成</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 ワークフロー3：Sora画像・動画生成
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🖼️ OpenAI Soraの活用
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🎨 高品質画像生成</div>
+    <div class="text-xs">テキスト説明からリアルな画像作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎬 短編動画生成</div>
+    <div class="text-xs">数秒の動画クリップを自動生成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔧 詳細な指示</div>
+    <div class="text-xs">具体的な設定・スタイルの指定</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 実践のポイント
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎯 具体的な指示</div>
+    <div class="text-xs">「学祭の会場の様子、明るい雰囲気」</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">✅ 生成結果の調整</div>
+    <div class="text-xs">複数生成して最適なものを選択</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔄 次のステップ</div>
+    <div class="text-xs">Veo2での動画生成</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 Sora実践：画像生成の手順
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📝 プロンプト入力画面
+
+<div class="text-center">
+  <img src="/sora/sora_imagegen.png" alt="Sora 画像生成プロンプト入力" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">詳細なプロンプトを入力して画像生成を開始</div>
+</div>
+
+<div class="mt-3 p-2 bg-gray-50 rounded text-xs">
+<div class="font-bold mb-1">プロンプト例：</div>
+<div>"Professional female Japanese mechanic with medium-length golden hair, wearing work uniform, draining engine oil from underneath a blue Honda Civic car in a workshop..."</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## ⚙️ 生成オプション設定
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🖼️ 生成モード</div>
+    <div class="text-xs">Image（画像）を選択</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📐 アスペクト比</div>
+    <div class="text-xs">2:3（縦長）を選択</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔄 生成数</div>
+    <div class="text-xs">2v（2バージョン）で複数生成</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">🚀 生成開始</div>
+    <div class="text-xs">上向き矢印で生成を実行</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 Sora実践：ライブラリでの結果確認
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📚 生成結果のライブラリ
+
+<div class="text-center">
+  <img src="/sora/sora_imagelibrary.png" alt="Sora 画像ライブラリ" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">生成された画像をライブラリで管理・確認</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 ライブラリの活用方法
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📁 メディア管理</div>
+    <div class="text-xs">生成された画像・動画を整理</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">⭐ お気に入り</div>
+    <div class="text-xs">気に入った作品を保存</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📤 アップロード</div>
+    <div class="text-xs">外部画像の追加も可能</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">🔍 検索・整理</div>
+    <div class="text-xs">プロンプトで作品を検索</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎬 ワークフロー4：Veo2動画生成
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎥 Google AI Studio Veo2
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📹 高品質動画作成</div>
+    <div class="text-xs">[Google AI Studio](https://aistudio.google.com/prompts/new_video)でプロ品質の動画生成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎭 ストーリー性</div>
+    <div class="text-xs">物語性のある動画を自動生成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔗 Google統合</div>
+    <div class="text-xs">Googleアカウントでシームレス連携</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 実践のポイント
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎯 具体的な指示</div>
+    <div class="text-xs">「学祭の様子を1分間の動画で」</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">✅ 生成結果の調整</div>
+    <div class="text-xs">Google AI Studioで細かい調整</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔄 次のステップ</div>
+    <div class="text-xs">Mapify + Gammaでの資料作成</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎬 Veo2実践：動画生成の手順
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📝 動画生成プロンプト入力
+
+<div class="text-center">
+  <img src="/veo2/veo2_gen_vid.png" alt="Veo2 動画生成プロンプト入力" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">Google AI Studioで動画生成のプロンプトを入力</div>
+</div>
+
+<div class="mt-3 p-2 bg-gray-50 rounded text-xs">
+<div class="font-bold mb-1">プロンプト例：</div>
+<div>"学祭の様子を1分間の動画で。明るい雰囲気、学生たちの笑顔、イベントの盛り上がりを表現"</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## ⚙️ Veo2の生成オプション
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🎬 動画生成</div>
+    <div class="text-xs">テキストから動画を自動生成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">⏱️ 動画の長さ</div>
+    <div class="text-xs">数秒〜数分の動画を作成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🎨 スタイル設定</div>
+    <div class="text-xs">動画の雰囲気やテーマを指定</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">🚀 生成開始</div>
+    <div class="text-xs">AIが動画を自動生成</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎬 Veo2実践：動画のダウンロード
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📥 生成された動画の確認
+
+<div class="text-center">
+  <img src="/veo2/veo2_download_vid.png" alt="Veo2 動画ダウンロード" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">生成された動画を確認・ダウンロード</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 動画の活用方法
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📱 SNS投稿</div>
+    <div class="text-xs">Instagram、TikTok、YouTubeなど</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎨 プレゼン資料</div>
+    <div class="text-xs">Gammaでのスライドに組み込み</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📚 学習教材</div>
+    <div class="text-xs">授業や説明動画として活用</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">🔄 編集・加工</div>
+    <div class="text-xs">他の動画編集ソフトで調整</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 ワークフロー5：Mapify + Gamma
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 Mapifyの基本機能
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🔗 YouTube連携</div>
+    <div class="text-xs">YouTubeリンクから自動でマインドマップ生成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🧠 マインドマップ作成</div>
+    <div class="text-xs">AIが内容を分析して構造化</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📝 マークダウン出力</div>
+    <div class="text-xs">Gammaでのスライド作成に最適化</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎨 Gammaとの連携
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📊 スライド自動生成</div>
+    <div class="text-xs">マークダウンから美しいプレゼン資料</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🖼️ 画像自動挿入</div>
+    <div class="text-xs">AIが適切な画像を自動選択</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📤 多形式エクスポート</div>
+    <div class="text-xs">PDF、PowerPoint、画像など</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 Mapify実践：YouTubeからマインドマップ作成
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🔗 YouTubeリンク入力
+
+<div class="text-center">
+  <img src="/mapify/mapify1.png" alt="Mapify YouTubeリンク入力" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">YouTubeのURLを入力してマインドマップ生成を開始</div>
+</div>
+
+<div class="mt-3 p-2 bg-gray-50 rounded text-xs">
+<div class="font-bold mb-1">入力例：</div>
+<div>https://www.youtube.com/watch?v=...</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## ⏳ マインドマップ生成中
+
+<div class="text-center">
+  <img src="/mapify/mapify2.png" alt="Mapify マインドマップ生成中" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIが動画内容を分析してマインドマップを作成中</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">生成プロセス：</div>
+<div>1. 動画内容の解析<br/>2. キーワード抽出<br/>3. 構造化されたマインドマップ作成</div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 Mapify実践：生成されたマインドマップ
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 完成したマインドマップ
+
+<div class="text-center">
+  <img src="/mapify/mapify3.png" alt="Mapify 生成されたマインドマップ" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIが生成した構造化されたマインドマップ</div>
+</div>
+
+<div class="mt-3 p-2 bg-green-50 rounded text-xs">
+<div class="font-bold mb-1">特徴：</div>
+<div>• 階層構造で整理<br/>• 関連性が明確<br/>• 視覚的に分かりやすい</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🔍 マインドマップの詳細表示
+
+<div class="text-center">
+  <img src="/mapify/mapify4.png" alt="Mapify マインドマップ詳細" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">拡大表示で細かい内容を確認</div>
+</div>
+
+<div class="mt-3 p-2 bg-purple-50 rounded text-xs">
+<div class="font-bold mb-1">確認ポイント：</div>
+<div>• 内容の正確性<br/>• 構造の合理性<br/>• 必要に応じた調整</div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🧠 Mapify実践：マークダウン出力
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📝 エクスポートオプション
+
+<div class="text-center">
+  <img src="/mapify/mapify5.png" alt="Mapify エクスポートオプション" class="w-full h-auto rounded-lg shadow-md mb-2" />
+  <div class="text-xs text-gray-600">様々な形式でエクスポート可能</div>
+</div>
+
+<div class="mt-2 p-2 bg-orange-50 rounded text-xs">
+<div class="font-bold mb-1">出力形式：</div>
+<div>• Markdown (.md)<br/>• 画像 (.png)<br/>• PDF (.pdf)</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 Gamma用マークダウン
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📋 構造化されたテキスト</div>
+    <div class="text-xs">Gammaが理解しやすい形式</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔗 階層関係の保持</div>
+    <div class="text-xs">見出しレベルが明確</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📝 キーポイント抽出</div>
+    <div class="text-xs">重要な情報が整理済み</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 Gamma実践：マークダウンからスライド作成
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🚀 Gamma.app/create アクセス
+
+<div class="text-center">
+  <img src="/mapify/m_gamma1.png" alt="Gamma テキスト入力選択" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">Gammaにアクセスしてテキストを貼り付けるを選択</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">手順：</div>
+<div>1. gamma.app/create にアクセス<br/>2. 「テキストを貼り付ける」を選択<br/>3. Mapifyのマークダウンを貼り付け</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 📊 プレゼンテーション形式選択
+
+<div class="text-center">
+  <img src="/mapify/m_gamma2.png" alt="Gamma プレゼンテーション選択" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">プレゼンテーションを選択してマークダウンを貼り付け</div>
+</div>
+
+<div class="mt-3 p-2 bg-green-50 rounded text-xs">
+<div class="font-bold mb-1">選択項目：</div>
+<div>• プレゼンテーション<br/>• ドキュメント<br/>• ウェブページ<br/>• その他</div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 Gamma実践：生成オプション設定
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## ⚙️ 生成オプションの選択
+
+<div class="text-center">
+  <img src="/mapify/m_gamma3.png" alt="Gamma 生成オプション選択" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">スライドのスタイルやレイアウトを選択</div>
+</div>
+
+<div class="mt-3 p-2 bg-purple-50 rounded text-xs">
+<div class="font-bold mb-1">オプション：</div>
+<div>• テーマ選択<br/>• カラーパレット<br/>• レイアウトスタイル<br/>• アニメーション</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎨 プレゼンテーション設定
+
+<div class="text-center">
+  <img src="/mapify/m_gamma4.png" alt="Gamma プレゼンテーション設定" class="w-full h-auto rounded-lg shadow-md mb-2" />
+  <div class="text-xs text-gray-600">詳細な設定でカスタマイズ</div>
+</div>
+
+<div class="mt-2 p-2 bg-orange-50 rounded text-xs">
+<div class="font-bold mb-1">設定項目：</div>
+<div>• スライド数<br/>• 画像の自動挿入<br/>• フォント・サイズ</div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 Gamma実践：完成したプレゼンテーション
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## ✨ 生成されたプレゼンテーション
+
+<div class="text-center">
+  <img src="/mapify/m_gamma5.png" alt="Gamma 生成されたプレゼンテーション" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIが自動生成した美しいスライド</div>
+</div>
+
+<div class="mt-3 p-2 bg-green-50 rounded text-xs">
+<div class="font-bold mb-1">特徴：</div>
+<div>• プロフェッショナルなデザイン<br/>• 適切な画像の自動挿入<br/>• 読みやすいレイアウト<br/>• 一貫性のあるスタイル</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 📤 エクスポートオプション
+
+<div class="text-center">
+  <img src="/mapify/m_gamma6.png" alt="Gamma エクスポートオプション" class="w-full h-auto rounded-lg shadow-md mb-2" />
+  <div class="text-xs text-gray-600">様々な形式でエクスポート可能</div>
+</div>
+
+<div class="mt-2 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">出力形式：</div>
+<div>• PowerPoint (.pptx)<br/>• PDF (.pdf)<br/>• 画像 (.png)<br/>• ウェブページ</div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🚀 Difyによる高度なAIワークフロー
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 Difyとは
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🤖 ノーコードAI開発</div>
+    <div class="text-xs">プログラミング不要でAIアプリ作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔗 複数AIモデル対応</div>
+    <div class="text-xs">Gemini、OpenAI、Claudeなど</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 ビジュアルワークフロー</div>
+    <div class="text-xs">ドラッグ&ドロップで簡単構築</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 今回紹介するワークフロー
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">📝 Google Forms</div>
+    <div class="text-xs">アンケート回答の収集</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🤖 Dify API</div>
+    <div class="text-xs">AIによる回答分析・レビュー</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📧 GAS + PDF</div>
+    <div class="text-xs">自動メール送信・レポート添付</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🔄 Difyワークフロー：Google Forms → Dify API → GAS → PDF Email
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📊 ワークフローの全体像
+
+<div class="text-center">
+  <img src="/dify/dify1.png" alt="Difyワークフロー全体像" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">Dify Studioでのワークフロー構築画面</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">ワークフロー構成：</div>
+<div>• 開始ノード（入力受付）<br/>• LLMノード（AI処理）<br/>• 回答ノード（結果出力）</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 各ステップの役割
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">1️⃣ Google Forms</div>
+    <div class="text-xs">ユーザーからの回答を収集</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">2️⃣ Dify API</div>
+    <div class="text-xs">AIが回答を分析・レビュー</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">3️⃣ GAS</div>
+    <div class="text-xs">結果をPDF化・メール送信</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🤖 Dify LLM設定：AIモデルの選択と設定
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## ⚙️ LLMノードの設定画面
+
+<div class="text-center">
+  <img src="/dify/dify_llm.png" alt="Dify LLM設定画面" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">LLMノードでのAIモデル設定とプロンプト定義</div>
+</div>
+
+<div class="mt-3 p-2 bg-green-50 rounded text-xs">
+<div class="font-bold mb-1">設定内容：</div>
+<div>• AIモデル：Gemini 2.5 Flash-Lite<br/>• システムプロンプト：猫っぽく元気よく回答<br/>• ユーザー入力：アンケート回答データ</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 プロンプトエンジニアリング
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🐱 システムプロンプト</div>
+    <div class="text-xs">「ユーザの質問に対して、猫っぽく元気よく回答してください」</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📝 ユーザー入力</div>
+    <div class="text-xs">Google Formsからの回答データを変数として設定</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔧 出力制御</div>
+    <div class="text-xs">Jinjaテンプレートで動的な内容生成</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 Difyモデル選択：Gemini 2.5 Flash-Lite
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🔍 モデル選択画面
+
+<div class="text-center">
+  <img src="/dify/dify_models.png" alt="Dify モデル選択画面" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">利用可能なAIモデルの一覧と選択</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 Gemini 2.5 Flash-Liteの特徴
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">⚡ 高速処理</div>
+    <div class="text-xs">軽量で高速な応答</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎯 高精度</div>
+    <div class="text-xs">日本語での自然な回答</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔗 多機能対応</div>
+    <div class="text-xs">チャット、文書処理、画像認識など</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">💰 コスト効率</div>
+    <div class="text-xs">高品質ながら低コスト</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 📧 最終出力：PDF添付メールの自動送信
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📨 自動送信メール
+
+<div class="text-center">
+  <img src="/dify/dify_email.jpg" alt="Dify 自動送信メール" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIレビュー報告書がPDFで添付された自動メール</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">メール内容：</div>
+<div>• 件名：【AIレビュー】アンケート回答のレビュー報告書<br/>• 添付：review.pdf（127KB）<br/>• 送信者：AIアンケートレビューシステム</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 📊 PDFレポートの内容
+
+<div class="text-center">
+  <img src="/dify/dify_pdf.jpg" alt="Dify 生成PDFレポート" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIが生成した詳細なレビュー報告書</div>
+</div>
+
+  <div class="mt-3 p-2 bg-green-50 rounded text-xs">
+    <div class="font-bold mb-1">レポート構成：</div>
+    <div>• 回答者情報<br/>• アンケート回答内容<br/>• AIレビュー（猫っぽい文体）<br/>• 総合評価・改善提案
+    </div>
+  </div>
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🔄 5つのワークフローの連携
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📋 情報の流れ
+
+<div class="space-y-3 mt-3">
+  <div class="flex items-center">
+    <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">1</div>
+    <div class="text-xs">🎥 Zoom Pro：会議録画・AI字幕生成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">2</div>
+    <div class="text-xs">📝 Notebook LM：要約・整理・構造化</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">3</div>
+    <div class="text-xs">🎨 Sora：画像・短編動画生成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-6 h-6 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">4</div>
+    <div class="text-xs">🎬 Veo2：Google AI Studio動画生成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">5</div>
+    <div class="text-xs">🎨 Mapify + Gamma：資料・スライド作成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">6</div>
+    <div class="text-xs">🚀 Dify：高度なAIワークフロー自動化</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 組み合わせの効果
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">⚡ 時間効率</div>
+    <div class="text-xs">従来の1/10の時間で作業完了</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🎯 品質向上</div>
+    <div class="text-xs">AIによる自動最適化</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔄 継続改善</div>
+    <div class="text-xs">AI提案による継続的な改善</div>
+  </div>
+  
+  <div class="p-2 bg-pink-100 rounded">
+    <div class="font-bold text-pink-800 text-sm">📚 学習効果</div>
+    <div class="text-xs">実際の作業を通じて習得</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🔧 実践ワークショップ（後半）：実際の作業体験
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 体験する作業
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">📝 議事録作成</div>
+    <div class="text-xs">Zoom Pro + Notebook LM</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎨 画像・動画生成</div>
+    <div class="text-xs">Sora + Veo2でビジュアル作成</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🗺️ マインドマップ作成</div>
+    <div class="text-xs">MapifyでYouTube動画要約</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">🎨 プレゼン資料作成</div>
+    <div class="text-xs">Mapify → Gamma ワークフロー</div>
+  </div>
+  
+  <div class="p-2 bg-red-100 rounded">
+    <div class="font-bold text-red-800 text-sm">🚀 高度なAIワークフロー</div>
+    <div class="text-xs">DifyでGoogle Forms → PDF Email自動化</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 実践のポイント
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">⚡ 時間効率</div>
+    <div class="text-xs">従来の1/10の時間で作業完了</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🎯 品質向上</div>
+    <div class="text-xs">AIによる自動最適化</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔄 継続改善</div>
+    <div class="text-xs">AI提案による継続的な改善</div>
+  </div>
+  
+  <div class="p-2 bg-pink-100 rounded">
+    <div class="font-bold text-pink-800 text-sm">📚 学習効果</div>
+    <div class="text-xs">実際の作業を通じて習得</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 💡 従来のメモ・ブクマをAIで整理する方法
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📚 従来の課題
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-red-100 rounded">
+    <div class="font-bold text-red-800 text-sm">📝 メモが散らばっている</div>
+    <div class="text-xs">ノート、スマホ、PCに分散</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">🔖 ブクマが整理されていない</div>
+    <div class="text-xs">カテゴリ分けができていない</div>
+  </div>
+  
+  <div class="p-2 bg-yellow-100 rounded">
+    <div class="font-bold text-yellow-800 text-sm">🔍 必要な情報が見つからない</div>
+    <div class="text-xs">検索・関連性が分からない</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">⏰ 整理に時間がかかる</div>
+    <div class="text-xs">手動での整理は非効率</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🤖 AIによる解決策
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📁 Notebook LMで一元管理</div>
+    <div class="text-xs">すべてのメモ・ブクマを統合</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔗 自動関連性発見</div>
+    <div class="text-xs">AIが関連情報を自動で発見</div>
+  </div>
+  
+  <div class="p-2 bg-indigo-100 rounded">
+    <div class="font-bold text-indigo-800 text-sm">📊 構造化・要約</div>
+    <div class="text-xs">情報を体系的に整理</div>
+  </div>
+  
+  <div class="p-2 bg-pink-100 rounded">
+    <div class="font-bold text-pink-800 text-sm">🔍 高度な検索</div>
+    <div class="text-xs">内容ベースでの検索が可能</div>
+  </div>
 </div>
 
 </div>
@@ -152,1391 +2041,56 @@ layout: center
 class: text-center
 ---
 
-# 生成AIとは？
+# 🎉 まとめ
 
-<div class="text-2xl mb-8">
-<span class="highlight">人間のように新しいコンテンツを作り出すAI</span>
-</div>
+<div class="text-6xl mb-8">🚀</div>
 
-<div class="grid grid-cols-3 gap-8 mt-12">
+## <span class="text-gradient">AI活用でタスク効率化を実現しよう</span>
 
-<div class="text-center">
-  <div class="text-6xl mb-4">📝</div>
-  <h3>文章を書く</h3>
-  <p class="text-sm opacity-75">レポート、メール、小説など</p>
-</div>
-
-<div class="text-center">
-  <div class="text-6xl mb-4">🎨</div>
-  <h3>絵を描く</h3>
-  <p class="text-sm opacity-75">イラスト、写真、デザインなど</p>
-</div>
-
-<div class="text-center">
-  <div class="text-6xl mb-4">💭</div>
-  <h3>考える</h3>
-  <p class="text-sm opacity-75">質問に答える、アイデア出しなど</p>
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 💡 身近な生成AIの活用例
-
-<div class="grid grid-cols-2 gap-6">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
 <div class="card">
 
-## 📱 メルカリの商品説明自動生成
-
-<div class="text-center">
-  <div class="text-4xl mb-3">📸</div>
-  <h3 class="text-lg font-bold mb-2">写真撮影だけで商品説明を自動生成</h3>
-</div>
-
-**機能：**
-- 商品の写真を撮影するだけ
-- AIが商品を自動認識
-- 基本的な雛形を自動生成
-
-<div class="mt-3 p-3 bg-green-100 rounded text-sm">
-💡 <strong>学生にも身近</strong>：フリマアプリで実際に体験できるAI機能
-</div>
+### 🎯 今日学んだこと
+- 議事録・メールのAI活用術
+- AI活用した要約の実践手法
+- タスク効率化のためのAIツール活用
+- 従来のメモ・ブクマをAIで整理する方法
 
 </div>
 
 <div class="card">
 
-## 🎯 他の身近な例
+### 🚀 期待される効果
+- **作業時間90%短縮**
+- **情報整理効率80%向上**
+- **品質75%向上**
+- **継続的改善の実現**
 
-**LINE AI**
-- 画像生成
-- AI検索
-
-**Google Lens**
-- 物体認識・説明
-
-<div class="mt-3 p-3 bg-blue-100 rounded text-sm">
-💡 <strong>気づかないうちに</strong>：日常でAIを活用している
 </div>
 
 </div>
 
+<div class="mt-6">
+  <span class="highlight text-lg">AIと共に、新しい働き方を始めよう！</span>
 </div>
 
 ---
-layout: default
----
-
-# 生成AIの仕組み（簡単に）
-
-<div class="grid grid-cols-2 gap-4">
-
-<div>
-
-## 🧠 学習プロセス
-
-```mermaid
-graph TD
-    A[大量のテキストデータ] --> B[AI学習]
-    B --> C[パターンを覚える]
-    C --> D[新しい文章を生成]
-```
-
-</div>
-
-<div>
-
-## 📚 学習データの例
-- **ウィキペディア**の記事
-- **ニュース**記事
-- **小説**や**詩**
-- **論文**や**教科書**
-
-<div class="mt-4 p-3 bg-amber-100 rounded">
-⚠️ <strong>注意</strong>：学習データの質が生成結果に影響
-</div>
-
-</div>
-
-</div>
-
----
-layout: center
-class: text-center
----
-
-# 第1部：ChatGPTって何？
-
-<div class="text-6xl mb-8">🤖💬</div>
-
-<div class="text-xl mb-4">
-世界で最も有名な生成AI
-</div>
-
-<div class="text-lg opacity-75">
-OpenAI社が開発した対話型AI
-</div>
-
----
-layout: default
----
-
-# ChatGPTの基本情報
-
-<div class="grid grid-cols-2 gap-8">
-
-<div>
-
-## 📊 基本データ
-- **開発会社**：OpenAI（アメリカ）
-- **公開日**：2022年11月30日
-- **ユーザー数**：1億人以上（2023年）
-- **対応言語**：100以上の言語
-- **日本語**：高精度で対応
-
-</div>
-
-<div>
-
-## 💰 料金プラン
-- **無料版**：基本的な機能
-- **有料版**：月額20ドル
-  - より高性能なモデル
-  - 画像生成機能
-  - プラグイン機能
-
-</div>
-
-</div>
-
-<div class="mt-8 p-4 bg-indigo-100 rounded">
-💡 <strong>本格的な使用には有料版が必要(トークン上限など)</strong>
-</div>
-
----
-layout: default
----
-
-# ChatGPTでできること
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📝 文章作成
-- **レポート**の下書き
-- **メール**の文面
-- **自己紹介文**
-- **履歴書**の志望動機
-- **プレゼン**の構成
-
-## 🤔 質問・相談
-- **勉強**の質問
-- **進路**の相談
-- **悩み事**の相談
-- **アイデア**出し
-
-</div>
-
-<div>
-
-## 📚 学習支援
-- **要約**作成
-- **翻訳**
-- **語学**学習
-- **プログラミング**学習
-- **数学**の解説
-
-## 🎯 その他
-- **スケジュール**作成
-- **料理**レシピ
-- **旅行**プラン
-- **ゲーム**の相手
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# ChatGPTの使い方（基本）
-
-<div class="grid grid-cols-2 gap-8">
-
-<div>
-
-## 🌐 アクセス方法
-1. **ブラウザ**で「ChatGPT」と検索
-2. **[chatgpt.com](https://chatgpt.com/)**にアクセス
-3. **アカウント**を作成（無料）
-4. **ログイン**して使用開始
-
-<div class="mt-4 p-3 bg-teal-100 rounded">
-✅ <strong>必要なもの</strong>：メールアドレスのみ
-</div>
-
-</div>
-
-<div>
-
-## 💬 基本的な使い方
-1. **質問**を入力
-2. **Enter**キーを押す
-3. **回答**を待つ（数秒）
-4. **追加質問**も可能
-
-<div class="mt-4 p-3 bg-cyan-100 rounded">
-💡 <strong>コツ</strong>：具体的に質問すると良い回答が得られる
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# AIへの質問の仕方
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## ❌ あまり良くない例
-
-<div class="bg-rose-100 p-4 rounded mb-4">
-「レポートを書いて」
-</div>
-
-<div class="bg-rose-100 p-4 rounded mb-4">
-「英語を教えて」
-</div>
-
-<div class="bg-rose-100 p-4 rounded">
-「おすすめを教えて」
-</div>
-
-<div class="mt-4 text-sm opacity-75">
-→ 抽象的すぎて、期待する回答が得られない
-</div>
-
-</div>
-
-<div>
-
-## ✅ 良い例
-
-<div class="bg-lime-100 p-4 rounded mb-4">
-「環境問題について800字のレポートを書いて」
-</div>
-
-<div class="bg-lime-100 p-4 rounded mb-4">
-「英語の過去形の使い方を例文付きで教えて」
-</div>
-
-<div class="bg-lime-100 p-4 rounded">
-「大学生におすすめの読書習慣を3つ教えて」
-</div>
-
-<div class="mt-4 text-sm opacity-75">
-→ 具体的で、明確な回答が期待できる
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🎯 七里式プロンプト「8+1の公式」の構成要素
-
-<style>
-.grid-container {
-  margin: 0.2rem 0 !important;
-}
-.card {
-  min-height: auto;
-  padding: 0.25rem;
-  margin-bottom: 0.1rem;
-  line-height: 1.2;
-}
-.card h6 {
-  margin: 0.1rem 0;
-  line-height: 1.2;
-}
-.text-xs {
-  line-height: 1.1;
-  margin-top: 0.1rem;
-}
-.plus-one {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  padding: 0.3rem;
-}
-</style>
-
-<div class="grid grid-cols-2 gap-1 grid-container">
-
-<div class="card p-1">
-
-###### 1. 前提条件
-**依頼者・制作者・目的**を提示
-<div class="text-xs text-gray-600">
-例：「大学生の私が」「環境問題のレポートを」
-</div>
-
-</div>
-
-<div class="card p-1">
-
-###### 5. 形容詞
-**名詞を修飾**して精度を向上
-<div class="text-xs text-gray-600">
-例：「簡潔な」「詳細な」
-</div>
-
-</div>
-
-<div class="card p-1">
-
-###### 2. 対象プロファイル
-**対象**を設定して目標を明確化
-<div class="text-xs text-gray-600">
-例：「高校生向け」「初心者レベル」
-</div>
-
-</div>
-
-<div class="card p-1">
-
-###### 6. 出力形式
-**出力の形式**を指定する
-<div class="text-xs text-gray-600">
-例：「箇条書き」「表形式」
-</div>
-
-</div>
-
-<div class="card p-1">
-
-###### 3. 参考情報
-**回答作成に必要な情報**を示す
-<div class="text-xs text-gray-600">
-例：「最新のデータ」「具体例」
-</div>
-
-</div>
-
-<div class="card p-1">
-
-###### 7. 参考フォーマット
-**文章構造**を参考にするよう指定
-<div class="text-xs text-gray-600">
-例：「PREP法」「起承転結」
-</div>
-
-</div>
-
-<div class="card p-1">
-
-###### 4. 名詞と動詞
-**何をすべきか**を名詞と動詞で指示
-<div class="text-xs text-gray-600">
-例：「作成する」「分析する」
-</div>
-
-</div>
-
-<div class="card p-1">
-
-###### 8. 文体指定
-**スタイル・トーン**を定義
-<div class="text-xs text-gray-600">
-例：「丁寧語」「カジュアル」
-</div>
-
-</div>
-
-</div>
-
-<div class="plus-one bg-blue-50 rounded text-center text-xs">
-💡 <strong>プラス1</strong>：再度指示で精度が上がる<br>
-「もっと詳しく」「具体例を追加して」
-</div>
-
----
-layout: default
----
-
-# 学生生活での活用例
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📖 勉強関連
-
-**例1：レポート作成**
-```text
-「SDGsについて1000字のレポートの
-構成を考えて」
-```
-
-**例2：試験対策**
-```text
-「日本史の明治維新について
-重要ポイントを5つ教えて」
-```
-
-**例3：語学学習**
-```text
-「『I am studying』を他の表現で
-3通り教えて」
-```
-
-</div>
-
-<div>
-
-## 🌟 生活関連
-
-**例4：就活準備**
-```text
-「IT企業の志望動機の書き方を
-例文付きで教えて」
-```
-
-**例5：プレゼン準備**
-```text
-「5分間の自己紹介プレゼンの
-構成を考えて」
-```
-
-**例6：悩み相談**
-```text
-「友人関係で悩んでいます。
-アドバイスをください」
-```
-
-</div>
-
-</div>
-
----
-layout: center
-class: text-center
----
-
-# 第2部：画像生成AIの世界
-
-<div class="text-6xl mb-8">🎨🤖</div>
-
-<div class="text-xl mb-4">
-文字で絵を描く魔法
-</div>
-
-<div class="text-lg opacity-75">
-「テキストから画像を生成」する技術
-</div>
-
----
-layout: default
----
-
-# 主な画像生成AI
-
-<div class="grid grid-cols-2 gap-8">
-
-<div>
-
-## 🎯 DALL-E 3
-- **開発**：OpenAI
-- **特徴**：ChatGPTと連携
-- **料金**：ChatGPT Plus（月額20ドル）
-- **品質**：非常に高い
-
-## 🎨 Midjourney
-- **開発**：Midjourney社
-- **特徴**：アート性が高い
-- **料金**：月額10ドル〜
-- **利用**：Discord経由
-
-</div>
-
-<div>
-
-## 🎯 Gemini Canvas
-- **開発**：Google
-- **特徴**：Geminiと連携
-- **料金**：Gemini Pro<br>（月額2,900円; 大学生は1年間無料）
-- **品質**：非常に高い
-
-## 🆓 (一部)無料で使えるもの
-- **Stable Diffusion** <br>
-（環境整備まで技術的な知識が必要）
-- **Canva AI**
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 画像生成AIの使い方
-
-<div class="grid grid-cols-2 gap-8">
-
-<div>
-
-## 📝 プロンプト（指示文）の書き方
-
-**基本構造：**
-```text
-[主題] + [スタイル] + [詳細]
-```
-
-**例：**
-```text
-「猫 + 水彩画風 + 花畑にいる」
-→ 「花畑にいる猫を水彩画風で」
-```
-
-</div>
-
-<div>
-
-## 🎨 スタイルの例
-- **写真風**：「photorealistic」
-- **アニメ風**：「anime style」
-- **水彩画風**：「watercolor」
-- **油絵風**：「oil painting」
-- **ピクサー風**：「Pixar style」
-- **ジブリ風**：「Studio Ghibli style」
-
-</div>
-
-</div>
-
-<div class="mt-8 p-4 bg-orange-100 rounded">
-⚠️ <strong>注意</strong>：著作権や肖像権に配慮した使用を心がけましょう
-</div>
-
----
-layout: default
----
-
-# 学生生活での画像生成AI活用
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📚 学習・研究
-- **プレゼン**用のイラスト
-- **レポート**の図解
-- **研究発表**のビジュアル
-- **ポスター**作成
-- **概念図**の作成
-
-## 🎯 プロジェクト
-- **サークル**のロゴ
-- **イベント**のポスター
-- **SNS**用の画像
-- **ブログ**のアイキャッチ
-
-</div>
-
-<div>
-
-## 💡 アイデア出し
-- **デザイン**の参考
-- **コンセプト**の可視化
-- **ブレインストーミング**の補助
-- **創作活動**のインスピレーション
-
-## 🎨 趣味・創作
-- **オリジナル**キャラクター
-- **架空の風景**
-- **ファンアート**
-- **壁紙**作成
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🖼️ 画像生成AIの実例
-
-<div class="grid grid-cols-2 gap-4 mt-4">
-
-<div class="card">
-
-<div class="text-center">
-  <img src="/image_generated/donki1.png" alt="ドンキホーテ店舗前の夜の風景" class="w-full h-48 object-cover rounded-lg shadow-md mb-2" />
-</div>
-
-<div class="text-center mt-3">
-  <img src="/image_generated/donki2.png" alt="ドンキホーテ駐車場の夜の様子" class="w-full h-48 object-cover rounded-lg shadow-md mb-2" />
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="text-center">
-  <img src="/image_generated/duffy_vellfire2.png" alt="ディズニーキャラクター付きカスタム車両" class="w-full h-48 object-cover rounded-lg shadow-md mb-2" />
-</div>
-
-<div class="text-center mt-3">
-  <img src="/image_generated/lexus1.png" alt="整備工場での女性整備士" class="w-full h-48 object-cover rounded-lg shadow-md mb-2" />
-</div>
-
-</div>
-
-</div>
-
-<div class="mt-4 p-3 bg-blue-50 rounded text-sm">
-💡 <strong>これらの画像は全てAIが生成したものです</strong><br>
-プロンプトの書き方次第で、様々なシーンやキャラクターを自由に作成できます
-</div>
-
----
-layout: default
----
-
-# 🖼️ 動画生成AIの実例
-
-<div class="grid grid-cols-2 gap-4 mt-4">
-
-<div class="card">
-
-## 動画生成例 1
-
-<div class="text-center">
-    <a href="https://drive.google.com/file/d/12rmQofkcspQudN6fUnFhFWAjhtnb77nR/view?usp=sharing" target="_blank">
-      AI生成動画 1
-    </a>
-</div>
-
-</div>
-
-<div class="card">
-
-## 動画生成例 2
-
-<div class="text-center">
-    <a href="https://drive.google.com/file/d/1RZp4ujmH9MY6KN2JFBCypJl2WASiDTtx/view?usp=sharing" target="_blank">
-      AI生成動画 2
-    </a>
-</div>
-
-</div>
-
-</div>
-
-<div class="mt-4 p-3 bg-blue-50 rounded text-sm">
-💡 <strong>これらの動画は全てAIが生成したものです</strong><br>
-テキストプロンプトから1~3分で動画を作成できます
-</div>
-
----
-layout: center
-class: text-center
----
-
-# 🚀 実践体験タイム！
-
-<div class="text-6xl mb-8">💻✨</div>
-
-<div class="text-xl mb-4">
-実際に動くAIポータルアプリを体験してみましょう
-</div>
-
-<div class="text-lg opacity-75">
-今から紹介する5つのAI機能を<br>
-実際に使ってみてください
-</div>
-
-<div class="mt-8 p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded">
-💡 <strong>AIポータル</strong>：あなたにピッタリのAIツールを見つけましょう
-</div>
-
----
-layout: default
----
-
-# 🌐 AIポータルアプリとは？
-
-<div class="grid grid-cols-2 gap-8">
-
-<div>
-
-## 📱 概要
-- **URL**: http://ai-portal-webapp.vercel.app/
-- **目的**: 学生向けAIツールの統合プラットフォーム
-- **特徴**: 5つのAI機能を1つのアプリで体験
-- **料金**: 完全無料
-
-## 🎯 対象者
-- **学生**（特に大学生）
-- **AI初心者**
-- **効率化を求めている人**
-- **新しい技術に興味がある人**
-
-</div>
-
-<div>
-
-## 💡 提供価値
-- **作業時間80%削減**
-- **学生に最適化**された機能
-
-<div class="mt-8 p-4 bg-blue-100 rounded text-center">
-🚀 <strong>今すぐ体験</strong><br>
-スマホでもPCでもアクセス可能
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🎯 AIツール診断（体験1）
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📱 機能詳細
-- **3つの簡単な質問**に答えるだけ
-- **あなたに最適なAIツール**を提案
-- **60個のAIツール**から最適な組み合わせを選択
-- **診断時間**: 約2分
-
-## 🎯 対象分野
-- 📝 レポート作成
-- 📊 プレゼン資料
-- 💻 プログラミング
-- 🔍 情報収集・調査
-
-</div>
-
-<div>
-
-## 💡 体験手順
-
-1. **AIポータル**のトップページにアクセス
-2. **「診断をはじめる（無料）」**をクリック
-3. **3つの質問**に回答
-4. **おすすめツール**を確認
-
-<div class="mt-8 p-4 bg-green-100 rounded text-center">
-💻 <strong>今すぐ体験</strong><br>
-AIポータル → AIツール診断
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🎯 60個のAIツールを実際に体験！
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 🚀 体験の流れ
-
-**1. 診断で最適なツールを発見**
-- 3つの質問に回答
-- あなたにピッタリのAIツールを発見
-
-**2. 推奨ツールを実際に体験**
-- 診断結果で提案されたツールにアクセス
-- 無料プランで機能を試す
-
-**3. 他のツールも探索**
-- 60個のツールをカテゴリ別に閲覧
-- 興味のある分野のツールを試す
-
-</div>
-
-<div>
-
-## 💡 体験のポイント
-
-**Googleアカウントで簡単サインアップ**
-- 既にログイン済みのブラウザ環境
-- ワンクリックでサインアップ完了
-
-**無料プランで本格体験**
-- 多くのツールが無料プラン提供
-- 基本的な機能を十分に体験可能
-
-<div class="mt-8 p-4 bg-blue-100 rounded text-center">
-🎯 <strong>目標</strong><br>
-今日中に最低3つのAIツールを体験しよう！
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🔍 60個のAIツール一覧（カテゴリ別）
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📝 文章・ライティング系
-- **ChatGPT** - 対話型AI
-- **Claude** - 高精度文章生成
-- **Notion AI** - ノート・文書作成
-- **Grammarly** - 英文校正・改善
-- **Jasper** - マーケティング文章
-
-## 🎨 画像・デザイン系
-- **DALL-E 3** - 高品質画像生成
-- **Midjourney** - アート性の高い画像
-- **Canva AI** - デザインテンプレート
-- **Leonardo AI** - アート作品生成
-- **Stable Diffusion** - オープンソース画像生成
-
-</div>
-
-<div>
-
-## 💻 プログラミング・開発系
-- **GitHub Copilot** - コード生成・補完
-- **Amazon CodeWhisperer** - AWS対応コード生成
-- **Tabnine** - AIコード補完
-- **Replit Ghost** - リアルタイムコーディング
-- **Codeium** - 無料コード補完
-
-## 🎤 音声・音楽系
-- **ElevenLabs** - 自然な音声合成
-- **Murf** - プロ品質音声
-- **Synthesia** - AIアバター動画
-- **AIVA** - AI作曲
-- **Suno** - 音楽生成
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🔍 60個のAIツール一覧（続き）
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📊 データ・分析系
-- **Tableau GPT** - データ可視化
-- **ChatGPT Code Interpreter** - データ分析
-- **Pandas AI** - Pythonデータ分析
-- **DataRobot** - 自動機械学習
-- **H2O.ai** - AIプラットフォーム
-- **RapidMiner** - データサイエンス
-- **KNIME** - データ分析ワークフロー
-- **Orange** - データマイニング
-
-## 🎓 教育・学習系
-- **Duolingo AI** - パーソナライズ学習
-- **Khan Academy AI** - 個別指導
-- **Coursera AI** - 学習パス最適化
-- **Quizlet AI** - スマート学習
-- **Socratic** - 宿題支援
-- **Photomath** - 数学問題解決
-- **Grammarly** - 英語学習支援
-- **Lingoda** - AI言語学習
-
-</div>
-
-<div>
-
-## 💼 ビジネス・生産性系
-- **Notion AI** - プロジェクト管理
-- **Asana AI** - タスク最適化
-- **Trello AI** - ボード管理
-- **Slack AI** - コミュニケーション支援
-- **Zoom AI** - 会議サポート
-- **Otter.ai** - 会議記録・要約
-- **Fireflies** - 会議分析
-- **Gong** - 営業分析・改善
-
-## 🎯 専門分野特化系
-- **Jasper** - マーケティング
-- **Copy.ai** - 広告・コピー
-- **Lumen5** - 動画マーケティング
-- **Phrasee** - メールマーケティング
-- **Persado** - 感情分析マーケティング
-- **Crayon** - 競合分析
-- **Brand24** - ブランド監視
-- **Mention** - ソーシャルメディア監視
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🚀 今日体験すべき2つのAIツール
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 🎯 推奨体験ツール
-
-**1. ChatGPT（必須体験）**
-- 最も基本的で強力なAIツール
-- 文章作成、質問回答、学習支援
-- 無料版で十分な機能を体験可能
-
-**2. AI画像生成ツール**
-- [Gemini Canvas](https://gemini.google.com/canvas)
-- レポートやプレゼン用の画像作成
-
-</div>
-
-<div>
-
-## 💡 体験のコツ
-
-**段階的に体験**
-1. **基本機能**を試す
-2. **実際の課題**に適用
-3. **他のツール**と比較
-
-**記録を残す**
-- どのツールが役立ったか
-- 使い方のコツ
-
-<div class="mt-8 p-4 bg-green-100 rounded text-center">
-🎯 <strong>今日の目標</strong><br>
-2つのAIツールを体験して、<br>
-自分のAI活用スタイルを確立しよう！
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🎨 AI画像生成（体験2）
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📱 機能詳細
-- **高品質4K画像生成**
-- **12種類のアートスタイル**から選択
-- **日本語プロンプト**完全対応
-- **リアルタイム生成**（数秒で完成）
-
-## 🎯 活用例
-- レポートの表紙・図解
-- プレゼン資料のビジュアル
-- SNS投稿用のオリジナル画像
-- 創作活動・アート作品
-
-</div>
-
-<div>
-
-## 💡 体験手順
-
-1. **AIポータル** → **AI画像生成**
-2. **プロンプト**を入力（日本語OK）
-3. **スタイル**を選択
-4. **生成**ボタンをクリック
-
-**プロンプト例：**
-「美しい夕日の海辺、桜の花びらが舞う風景」
-
-<div class="mt-8 p-4 bg-purple-100 rounded text-center">
-💻 <strong>今すぐ体験</strong><br>
-AIポータル → AI画像生成
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🎤 読み上げAI（体験3）
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📱 機能詳細
-- **高品質音声合成**（自然で滑らか）
-- **30種類の音声**から選択
-- **日本語音声**に特化
-- **リアルタイム生成**（数秒で完成）
-
-## 🎯 活用例
-- レポートの音声確認・校正
-- 語学学習（発音・リスニング）
-- プレゼン練習（聞き取りやすさ確認）
-- コンテンツ作成（動画・ポッドキャスト）
-
-</div>
-
-<div>
-
-## 💡 体験手順
-
-1. **AIポータル** → **読み上げAI**
-2. **テキスト**を入力
-3. **音声タイプ**を選択
-4. **生成**ボタンをクリック
-
-**入力例：**
-「こんにちは！高品質な音声合成をお試しください。」
-
-<div class="mt-8 p-4 bg-blue-100 rounded text-center">
-💻 <strong>今すぐ体験</strong><br>
-AIポータル → 読み上げAI
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🎯 AI模擬面接官（体験4）
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📱 機能詳細
-- **音声録音**で面接練習
-- **多様な質問**に対応
-- **AIによるフィードバック**提供
-- **リアルタイム音声認識**
-
-## 🎯 活用例
-- 就職活動の面接練習
-- プレゼンテーション練習
-- コミュニケーションスキル向上
-- 緊張感のある場での練習
-
-</div>
-
-<div>
-
-## 💡 体験手順
-
-1. **AIポータル** → **AI模擬面接官**
-2. **録音開始**ボタンを押す
-3. **質問に音声で回答**
-4. **AIからフィードバック**を受ける
-
-**質問例：**
-- 自己紹介をお願いします
-- 志望動機を教えてください
-- 学生時代に頑張ったことは？
-
-<div class="mt-8 p-4 bg-green-100 rounded text-center">
-💻 <strong>今すぐ体験</strong><br>
-AIポータル → AI模擬面接官
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🍜 ご当地グルメ案内（体験5）
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📱 機能詳細
-- **全国対応**のグルメ検索
-- **AI分析**による店舗提案
-- **営業中の店舗**のみ表示
-
-## 🎯 活用例
-- 旅行先でのグルメ探し
-- 地元の名店発見
-- デート・会食の店選び
-
-</div>
-
-<div>
-
-## 💡 体験手順
-
-1. **AIポータル** → **ご当地グルメ案内**
-2. **都道府県**を選択
-3. **ジャンル**を選択
-4. **営業中の店舗**を確認
-
-**表示情報：**
-- 店舗名・評価
-- 価格帯・営業状況
-
-<div class="mt-6 p-4 bg-orange-100 rounded text-center">
-💻 <strong>今すぐ体験</strong><br>
-AIポータル → ご当地グルメ案内
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 💻 技術的な学び
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 🛠️ AIポータルの技術スタック
-
-**フロントエンド**
-- Next.js 15（App Router）
-- TypeScript
-- Tailwind CSS
-
-**AI・API統合**
-- Google Gemini API（テキスト生成・分析）
-- Imagen3 API（画像生成）
-- Gemini 2.5 Flash Preview TTS（音声合成）
-
-**デプロイ・運用**
-- Vercel（自動デプロイ・CDN）
-- 環境変数管理
-
-</div>
-
-<div>
-
-## 📚 学習のポイント
-
-**統合アプリ開発**
-- 複数AI機能の統合設計
-- ユーザー体験の一貫性
-
-**実践的スキル**
-- 複数API連携の実装方法
-- 非同期処理とエラーハンドリング
-
-**AI活用技術**
-- プロンプトエンジニアリング
-- 音声認識・合成技術の実装
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 今日から始められること
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 🎯 すぐにできること
-
-**1. AIポータルアプリを体験**
-- AIツール診断で自分に合った機能を発見
-- 各AI機能を実際に使ってみる
-- 異なる用途での活用を試す
-
-**2. 60個のAIツールを探索**
-- カテゴリ別にツールを閲覧
-- 興味のある分野のツールを試す
-- 今日中に最低3つのツールを体験
-
-**3. 学習・作業に活用**
-- レポート作成での画像生成
-- プレゼン練習での読み上げ機能
-- 面接練習でのスキル向上
-
-**4. 技術的な探求**
-- 各AI技術の仕組みを理解
-- プロンプトの工夫を実験
-- 友達と一緒に使ってみる
-
-</div>
-
-<div>
-
-## 📈 継続的な学習
-
-**AIツール体験の継続**
-- 週に1つ新しいAIツールを試す
-- 効果的な使い方を記録・共有
-
-**技術的な深掘り**
-- 各AI技術の仕組み理解
-- 開発プロセスの学習
-
-**応用・発展**
-- 自分なりのAI活用法開発
-- 他の学習・作業への応用
-- AI技術を使った課題解決
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🎯 今後のAIツール活用計画
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 📅 短期目標（1ヶ月）
-
-**週1ツール体験**
-- 1週目：文章作成系（ChatGPT、Claude）
-- 2週目：画像生成系（DALL-E、Midjourney）
-- 3週目：プログラミング系（GitHub Copilot）
-- 4週目：音声・音楽系（ElevenLabs、AIVA）
-
-**実践的な活用**
-- レポート・課題でのAI活用
-- プレゼン資料の作成支援
-- 学習効率の向上
-
-</div>
-
-<div>
-
-## 🚀 中期目標（3ヶ月）
-
-**AIツールマスター**
-- 20個以上のAIツールを体験
-- 自分の専門分野に特化したツールを発見
-
-**スキルアップ**
-- プロンプトエンジニアリングの習得
-- AI倫理と適切な使用方法の理解
-
-<div class="mt-6 p-4 bg-purple-100 rounded text-center">
-🎯 <strong>最終目標</strong><br>
-60個のAIツールを制覇して、<br>
-AI活用のエキスパートになろう！
-</div>
-
-</div>
-
-</div>
-
----
-layout: center
-class: text-center
----
-
-# まとめ
-
-<div class="text-xl mb-8">
-生成AIは<span class="highlight">強力な学習パートナー</span>
-</div>
-
-<div class="grid grid-cols-3 gap-8 mt-12">
-
-<div class="text-center">
-  <div class="text-4xl mb-4">🤝</div>
-  <h3>協働</h3>
-  <p class="text-sm">AIと一緒に<br>より良い成果を</p>
-</div>
-
-<div class="text-center">
-  <div class="text-4xl mb-4">🧠</div>
-  <h3>思考</h3>
-  <p class="text-sm">考える力を<br>失わずに活用</p>
-</div>
-
-<div class="text-center">
-  <div class="text-4xl mb-4">🌟</div>
-  <h3>創造</h3>
-  <p class="text-sm">人間らしい<br>創造性を大切に</p>
-</div>
-
-</div>
-
----
-layout: center
+layout: end
 class: text-center
 ---
 
 # ありがとうございました！
 
-<div class="text-6xl mb-8">🎉</div>
+<div class="text-6xl mb-8">🙏</div>
 
-<div class="text-xl mb-4">
-生成AIを活用して、<br>
-学業、仕事に役立ててください！
+## 質問・相談はいつでもどうぞ
+
+<div class="mt-6 text-lg opacity-80">
+  AI活用によるタスク効率化で、あなたの可能性を最大化しましょう！
 </div>
 
-<div class="text-lg opacity-75 mt-8">
-今日学んだことを実践してみましょう
+<div class="abs-br m-6 flex gap-2">
+  <span class="text-sm opacity-50">AI活用によるタスク効率化 | 90分講義完了</span>
 </div>
 
-<div class="mt-12">
-  <div class="text-sm opacity-50">
-    講義資料：生成AIって何？どう使うの？
-  </div>
-</div>

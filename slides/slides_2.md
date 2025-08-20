@@ -327,13 +327,46 @@ layout: default
 layout: default
 ---
 
-# 🔧 実践ワークショップ（前半）：5つのAIワークフロー体験
+# 🧠 今回紹介するAIツール（続き）
 
 <div class="grid grid-cols-2 gap-6 mt-6">
 
 <div class="card">
 
-## 🎯 体験する5つのワークフロー
+## 🚀 Dify
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🤖 ノーコードAI開発</div>
+    <div class="text-xs">プログラミング不要でAIアプリ作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔗 複数AIモデル対応</div>
+    <div class="text-xs">Gemini、OpenAI、Claudeなど</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 ビジュアルワークフロー</div>
+    <div class="text-xs">ドラッグ&ドロップで簡単構築</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🔧 実践ワークショップ：6つのAIワークフロー体験
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 体験する6つのワークフロー
 
 <div class="space-y-2 mt-2">
   <div class="flex items-center">
@@ -359,6 +392,11 @@ layout: default
   <div class="flex items-center">
     <div class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">5</div>
     <div class="text-xs">🎨 Mapify + Gammaスライド作成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-2">6</div>
+    <div class="text-xs">🚀 Dify高度なAIワークフロー</div>
   </div>
 </div>
 
@@ -1544,6 +1582,251 @@ layout: default
 layout: default
 ---
 
+# 🚀 Difyによる高度なAIワークフロー
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🎯 Difyとは
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🤖 ノーコードAI開発</div>
+    <div class="text-xs">プログラミング不要でAIアプリ作成</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🔗 複数AIモデル対応</div>
+    <div class="text-xs">Gemini、OpenAI、Claudeなど</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">📊 ビジュアルワークフロー</div>
+    <div class="text-xs">ドラッグ&ドロップで簡単構築</div>
+  </div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 今回紹介するワークフロー
+
+<div class="space-y-2 mt-2">
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">📝 Google Forms</div>
+    <div class="text-xs">アンケート回答の収集</div>
+  </div>
+  
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🤖 Dify API</div>
+    <div class="text-xs">AIによる回答分析・レビュー</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📧 GAS + PDF</div>
+    <div class="text-xs">自動メール送信・レポート添付</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🔄 Difyワークフロー：Google Forms → Dify API → GAS → PDF Email
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📊 ワークフローの全体像
+
+<div class="text-center">
+  <img src="/dify/dify1.png" alt="Difyワークフロー全体像" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">Dify Studioでのワークフロー構築画面</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">ワークフロー構成：</div>
+<div>• 開始ノード（入力受付）<br/>• LLMノード（AI処理）<br/>• 回答ノード（結果出力）</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 各ステップの役割
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">1️⃣ Google Forms</div>
+    <div class="text-xs">ユーザーからの回答を収集</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">2️⃣ Dify API</div>
+    <div class="text-xs">AIが回答を分析・レビュー</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">3️⃣ GAS</div>
+    <div class="text-xs">結果をPDF化・メール送信</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🤖 Dify LLM設定：AIモデルの選択と設定
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## ⚙️ LLMノードの設定画面
+
+<div class="text-center">
+  <img src="/dify/dify_llm.png" alt="Dify LLM設定画面" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">LLMノードでのAIモデル設定とプロンプト定義</div>
+</div>
+
+<div class="mt-3 p-2 bg-green-50 rounded text-xs">
+<div class="font-bold mb-1">設定内容：</div>
+<div>• AIモデル：Gemini 2.5 Flash-Lite<br/>• システムプロンプト：猫っぽく元気よく回答<br/>• ユーザー入力：アンケート回答データ</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 🎯 プロンプトエンジニアリング
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">🐱 システムプロンプト</div>
+    <div class="text-xs">「ユーザの質問に対して、猫っぽく元気よく回答してください」</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">📝 ユーザー入力</div>
+    <div class="text-xs">Google Formsからの回答データを変数として設定</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔧 出力制御</div>
+    <div class="text-xs">Jinjaテンプレートで動的な内容生成</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 🎨 Difyモデル選択：Gemini 2.5 Flash-Lite
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 🔍 モデル選択画面
+
+<div class="text-center">
+  <img src="/dify/dify_models.png" alt="Dify モデル選択画面" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">利用可能なAIモデルの一覧と選択</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 💡 Gemini 2.5 Flash-Liteの特徴
+
+<div class="space-y-3 mt-3">
+  <div class="p-2 bg-blue-100 rounded">
+    <div class="font-bold text-blue-800 text-sm">⚡ 高速処理</div>
+    <div class="text-xs">軽量で高速な応答</div>
+  </div>
+  
+  <div class="p-2 bg-green-100 rounded">
+    <div class="font-bold text-green-800 text-sm">🎯 高精度</div>
+    <div class="text-xs">日本語での自然な回答</div>
+  </div>
+  
+  <div class="p-2 bg-purple-100 rounded">
+    <div class="font-bold text-purple-800 text-sm">🔗 多機能対応</div>
+    <div class="text-xs">チャット、文書処理、画像認識など</div>
+  </div>
+  
+  <div class="p-2 bg-orange-100 rounded">
+    <div class="font-bold text-orange-800 text-sm">💰 コスト効率</div>
+    <div class="text-xs">高品質ながら低コスト</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 📧 最終出力：PDF添付メールの自動送信
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="card">
+
+## 📨 自動送信メール
+
+<div class="text-center">
+  <img src="/dify/dify_email.jpg" alt="Dify 自動送信メール" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIレビュー報告書がPDFで添付された自動メール</div>
+</div>
+
+<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
+<div class="font-bold mb-1">メール内容：</div>
+<div>• 件名：【AIレビュー】アンケート回答のレビュー報告書<br/>• 添付：review.pdf（127KB）<br/>• 送信者：AIアンケートレビューシステム</div>
+</div>
+
+</div>
+
+<div class="card">
+
+## 📊 PDFレポートの内容
+
+<div class="text-center">
+  <img src="/dify/dify_pdf.jpg" alt="Dify 生成PDFレポート" class="w-full h-auto rounded-lg shadow-md mb-3" />
+  <div class="text-xs text-gray-600">AIが生成した詳細なレビュー報告書</div>
+</div>
+
+  <div class="mt-3 p-2 bg-green-50 rounded text-xs">
+    <div class="font-bold mb-1">レポート構成：</div>
+    <div>• 回答者情報<br/>• アンケート回答内容<br/>• AIレビュー（猫っぽい文体）<br/>• 総合評価・改善提案
+    </div>
+  </div>
+</div>
+
+</div>
+
+---
+layout: default
+---
+
 # 🔄 5つのワークフローの連携
 
 <div class="grid grid-cols-2 gap-6 mt-6">
@@ -1576,6 +1859,11 @@ layout: default
   <div class="flex items-center">
     <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">5</div>
     <div class="text-xs">🎨 Mapify + Gamma：資料・スライド作成</div>
+  </div>
+  
+  <div class="flex items-center">
+    <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">6</div>
+    <div class="text-xs">🚀 Dify：高度なAIワークフロー自動化</div>
   </div>
 </div>
 
@@ -1642,6 +1930,11 @@ layout: default
   <div class="p-2 bg-orange-100 rounded">
     <div class="font-bold text-orange-800 text-sm">🎨 プレゼン資料作成</div>
     <div class="text-xs">Mapify → Gamma ワークフロー</div>
+  </div>
+  
+  <div class="p-2 bg-red-100 rounded">
+    <div class="font-bold text-red-800 text-sm">🚀 高度なAIワークフロー</div>
+    <div class="text-xs">DifyでGoogle Forms → PDF Email自動化</div>
   </div>
 </div>
 
@@ -1801,156 +2094,3 @@ class: text-center
   <span class="text-sm opacity-50">AI活用によるタスク効率化 | 90分講義完了</span>
 </div>
 
----
-layout: default
----
-
-# 🔄 Zoom AI + NoteBookLM連携ワークフロー
-
-<div class="grid grid-cols-2 gap-6 mt-6">
-
-<div class="card">
-
-## 🎯 連携の流れ
-
-<div class="space-y-3 mt-3">
-  <div class="p-2 bg-blue-100 rounded">
-    <div class="font-bold text-blue-800 text-sm">1️⃣ Zoom Pro AI</div>
-    <div class="text-xs">ミーティング録画・AI字幕生成</div>
-  </div>
-  
-  <div class="p-2 bg-green-100 rounded">
-    <div class="font-bold text-green-800 text-sm">2️⃣ 文字起こしファイル</div>
-    <div class="text-xs">字幕ファイルをダウンロード</div>
-  </div>
-  
-  <div class="p-2 bg-purple-100 rounded">
-    <div class="font-bold text-purple-800 text-sm">3️⃣ NoteBookLM</div>
-    <div class="text-xs">要約・分析・構造化</div>
-  </div>
-</div>
-
-</div>
-
-<div class="card">
-
-## 💡 連携のメリット
-
-<div class="space-y-3 mt-3">
-  <div class="p-2 bg-green-100 rounded">
-    <div class="font-bold text-green-800 text-sm">⏰ 時間効率化</div>
-    <div class="text-xs">手動文字起こしの手間を削減</div>
-  </div>
-  
-  <div class="p-2 bg-blue-100 rounded">
-    <div class="font-bold text-blue-800 text-sm">🧠 深い分析</div>
-    <div class="text-xs">AIが内容を構造化・要約</div>
-  </div>
-  
-  <div class="p-2 bg-purple-100 rounded">
-    <div class="font-bold text-purple-800 text-sm">📊 知識管理</div>
-    <div class="text-xs">会議内容を体系的に整理</div>
-  </div>
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🧠 NoteBookLM活用事例：Zoom文字起こしからメモ作成
-
-<div class="grid grid-cols-2 gap-6 mt-6">
-
-<div class="card">
-
-## 📝 Zoom文字起こしの活用
-
-<div class="text-center">
-  <img src="/notebooklm/zoom_notebooklm_memo.png" alt="Zoom文字起こしからメモ作成" class="w-full h-auto rounded-lg shadow-md mb-3" />
-  <div class="text-xs text-gray-600">Zoomの文字起こしを基にした詳細なメモ作成</div>
-</div>
-
-<div class="mt-3 p-2 bg-blue-50 rounded text-xs">
-<div class="font-bold mb-1">作成されるメモ：</div>
-<div>• 会議の要点まとめ<br/>• 重要な決定事項<br/>• アクションアイテム<br/>• 次回への課題</div>
-</div>
-
-</div>
-
-<div class="card">
-
-## 💡 メモ作成のポイント
-
-<div class="space-y-3 mt-3">
-  <div class="p-2 bg-blue-100 rounded">
-    <div class="font-bold text-blue-800 text-sm">📋 構造化</div>
-    <div class="text-xs">情報を論理的に整理</div>
-  </div>
-  
-  <div class="p-2 bg-green-100 rounded">
-    <div class="font-bold text-green-800 text-sm">🔍 重要度</div>
-    <div class="text-xs">優先順位をつけて整理</div>
-  </div>
-  
-  <div class="p-2 bg-purple-100 rounded">
-    <div class="font-bold text-purple-800 text-sm">📅 時系列</div>
-    <div class="text-xs">議論の流れを時系列で整理</div>
-  </div>
-</div>
-
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 🧠 NoteBookLM活用事例：Zoom文字起こしからマインドマップ作成
-
-<div class="grid grid-cols-2 gap-6 mt-6">
-
-<div class="card">
-
-## 🧠 マインドマップでの構造化
-
-<div class="text-center">
-  <img src="/notebooklm/zoom_notebooklm_mindmap.png" alt="Zoom文字起こしからマインドマップ作成" class="w-full h-auto rounded-lg shadow-md mb-3" />
-  <div class="text-xs text-gray-600">会議内容をマインドマップで視覚的に整理</div>
-</div>
-
-<div class="mt-3 p-2 bg-green-50 rounded text-xs">
-<div class="font-bold mb-1">マインドマップの特徴：</div>
-<div>• 階層構造での整理<br/>• 関連性の可視化<br/>• 全体像の把握<br/>• 記憶の定着促進</div>
-</div>
-
-</div>
-
-<div class="card">
-
-## 🎯 マインドマップ活用のポイント
-
-<div class="space-y-3 mt-3">
-  <div class="p-2 bg-green-100 rounded">
-    <div class="font-bold text-green-800 text-sm">🎨 視覚的整理</div>
-    <div class="text-xs">複雑な議論を図解化</div>
-  </div>
-  
-  <div class="p-2 bg-blue-100 rounded">
-    <div class="font-bold text-blue-800 text-sm">🔗 関連性発見</div>
-    <div class="text-xs">隠れたつながりを発見</div>
-  </div>
-  
-  <div class="p-2 bg-purple-100 rounded">
-    <div class="font-bold text-purple-800 text-sm">📚 学習効果</div>
-    <div class="text-xs">理解度と記憶の向上</div>
-  </div>
-</div>
-
-</div>
-
-</div>
