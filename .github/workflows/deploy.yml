@@ -51,6 +51,10 @@ jobs:
           
           echo "Building slides from entries.json..."
           
+          # 既存のdistディレクトリ内をクリーンアップ
+          mkdir -p dist
+          rm -rf dist/slides_* || true
+          
           # プロジェクトルートに移動してビルド
           cd slides
           
@@ -59,11 +63,13 @@ jobs:
               num=$(echo "$file" | sed 's/slides_\([0-9]*\)\.md/\1/')
               echo "Building: $file → slides_$num"
               
-              # 絶対パス指定でビルド
+              # 出力ディレクトリを一度削除してからビルド
+              rm -rf "../dist/slides_$num" || true
+              
+              # emptyOutDir オプションを削除してビルド
               npx slidev build "$file" \
                 --base /${{ github.event.repository.name }}/slides_$num/ \
-                --out ../dist/slides_$num \
-                --emptyOutDir
+                --out "../dist/slides_$num"
             fi
           done
           cd ..
@@ -213,6 +219,9 @@ jobs:
           echo ""
           echo "Slides directories:"
           ls -la dist/slides_*/ || echo "No slides directories found"
+          echo ""
+          echo "Checking index.html:"
+          ls -la dist/index.html || echo "index.html not found"
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
