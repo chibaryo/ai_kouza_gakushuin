@@ -265,6 +265,52 @@ graph TD
 </div>
 
 ---
+layout: default
+---
+
+# 🚀 今日体験すべき2つのAIツール
+
+<div class="grid grid-cols-2 gap-6">
+
+<div>
+
+## 🎯 推奨体験ツール
+
+**1. ChatGPT（必須体験）**
+- 最も基本的で強力なAIツール
+- 文章作成、質問回答、学習支援
+- 無料版で十分な機能を体験可能
+
+**2. AI画像生成ツール**
+- [Gemini Canvas](https://gemini.google.com/canvas)
+- レポートやプレゼン用の画像作成
+
+</div>
+
+<div>
+
+## 💡 体験のコツ
+
+**段階的に体験**
+1. **基本機能**を試す
+2. **実際の課題**に適用
+3. **他のツール**と比較
+
+**記録を残す**
+- どのツールが役立ったか
+- 使い方のコツ
+
+<div class="mt-8 p-4 bg-green-100 rounded text-center">
+🎯 <strong>今日の目標</strong><br>
+2つのAIツールを体験して、<br>
+自分のAI活用スタイルを確立しよう！
+</div>
+
+</div>
+
+</div>
+
+---
 layout: center
 class: text-center
 ---
@@ -1107,51 +1153,6 @@ layout: default
 
 </div>
 
----
-layout: default
----
-
-# 🚀 今日体験すべき2つのAIツール
-
-<div class="grid grid-cols-2 gap-6">
-
-<div>
-
-## 🎯 推奨体験ツール
-
-**1. ChatGPT（必須体験）**
-- 最も基本的で強力なAIツール
-- 文章作成、質問回答、学習支援
-- 無料版で十分な機能を体験可能
-
-**2. AI画像生成ツール**
-- [Gemini Canvas](https://gemini.google.com/canvas)
-- レポートやプレゼン用の画像作成
-
-</div>
-
-<div>
-
-## 💡 体験のコツ
-
-**段階的に体験**
-1. **基本機能**を試す
-2. **実際の課題**に適用
-3. **他のツール**と比較
-
-**記録を残す**
-- どのツールが役立ったか
-- 使い方のコツ
-
-<div class="mt-8 p-4 bg-green-100 rounded text-center">
-🎯 <strong>今日の目標</strong><br>
-2つのAIツールを体験して、<br>
-自分のAI活用スタイルを確立しよう！
-</div>
-
-</div>
-
-</div>
 
 ---
 layout: default
