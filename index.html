@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>AI講義資料一覧</title>
+      <style>
+          body { 
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; 
+              max-width: 900px; 
+              margin: 0 auto; 
+              padding: 2rem 1rem; 
+              line-height: 1.6; 
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              min-height: 100vh;
+          }
+          .container {
+              background: white;
+              border-radius: 16px;
+              padding: 2rem;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          }
+          h1 {
+              text-align: center;
+              color: #333;
+              margin-bottom: 2rem;
+              font-size: 2.5rem;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+          }
+          .slides-list {
+              list-style: none;
+              padding: 0;
+              display: grid;
+              gap: 1rem;
+          }
+          .slide-item {
+              background: #f8f9fa;
+              border-radius: 12px;
+              padding: 1.5rem;
+              transition: all 0.3s ease;
+              border: 2px solid transparent;
+          }
+          .slide-item:hover {
+              background: #e3f2fd;
+              border-color: #2196f3;
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+          }
+          .slide-link {
+              display: block;
+              text-decoration: none;
+              color: #1976d2;
+              font-weight: 600;
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+          }
+          .slide-description {
+              color: #666;
+              margin: 0;
+              font-size: 0.95rem;
+          }
+          .slide-number {
+              display: inline-block;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              color: white;
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 32px;
+              margin-right: 0.5rem;
+              font-weight: bold;
+          }
+          footer {
+              text-align: center;
+              margin-top: 3rem;
+              color: #666;
+              font-size: 0.9rem;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1>📚 AI講義資料一覧</h1>
+          <ul class="slides-list">
+              <li class="slide-item">
+                  <a href="slides_1/" class="slide-link">
+                      <span class="slide-number">1</span>
+                      講義資料 第1回 - 生成AIって何？どう使うの？ -
+                  </a>
+                  <p class="slide-description">AI活用 - 入門編</p>
+              </li>
+              <li class="slide-item">
+                  <a href="slides_2/" class="slide-link">
+                      <span class="slide-number">2</span>
+                      講義資料 第2回 - AI活用によるタスク効率化 -
+                  </a>
+                  <p class="slide-description">AI活用 - 応用編</p>
+              </li>
+          </ul>
+          <footer>
+              <p>© 2024 AI講義資料</p>
+          </footer>
+      </div>
+  </body>
+  </html>
